@@ -171,7 +171,7 @@ a{color:#6B4A9B;text-decoration:none}a:hover{color:#3D1F5C}
           <svg viewBox="0 0 100 150" style="display:block;width:100%;height:auto"><rect x="1" y="1" width="98" height="148" rx="49" style="fill:none;stroke:url(#gold);stroke-width:1.4"></rect><rect x="5" y="5" width="90" height="140" rx="45" style="fill:none;stroke:url(#gold);stroke-width:.8"></rect></svg>
           <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-weight:400;font-size:78cqw;line-height:1;color:#3D1F5C;padding-top:4cqw">A</div>
         </div>
-        <div style="font-family:'Italiana',serif;font-size:clamp(30px,4vw,44px);white-space:nowrap;letter-spacing:.14em;color:#3D1F5C;line-height:1;padding-left:.14em">ARYANNE LIRA</div>
+        <div style="font-family:'Italiana',serif;font-size:clamp(16px,5.4vw,44px);white-space:nowrap;letter-spacing:.14em;color:#3D1F5C;line-height:1;padding-left:.14em">ARYANNE LIRA</div>
         <div style="font-size:11px;letter-spacing:.46em;white-space:nowrap;text-transform:uppercase;color:#6B4A9B;padding-left:.46em;font-weight:400">Estética Avançada</div>
       </div>
       <span></span>
@@ -184,7 +184,7 @@ a{color:#6B4A9B;text-decoration:none}a:hover{color:#3D1F5C}
           <svg viewBox="0 0 100 150" style="display:block;width:100%;height:auto"><rect x="1" y="1" width="98" height="148" rx="49" style="fill:none;stroke:url(#gold);stroke-width:1.4"></rect><rect x="5" y="5" width="90" height="140" rx="45" style="fill:none;stroke:url(#gold);stroke-width:.8"></rect></svg>
           <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-weight:400;font-size:78cqw;line-height:1;color:#F8F5F1;padding-top:4cqw">A</div>
         </div>
-        <div style="font-family:'Italiana',serif;font-size:clamp(30px,4vw,44px);white-space:nowrap;letter-spacing:.14em;color:#F8F5F1;line-height:1;padding-left:.14em">ARYANNE LIRA</div>
+        <div style="font-family:'Italiana',serif;font-size:clamp(16px,5.4vw,44px);white-space:nowrap;letter-spacing:.14em;color:#F8F5F1;line-height:1;padding-left:.14em">ARYANNE LIRA</div>
         <div style="font-size:11px;letter-spacing:.46em;white-space:nowrap;text-transform:uppercase;color:#CBBBE3;padding-left:.46em;font-weight:400">Estética Avançada</div>
       </div>
       <span></span>
@@ -192,14 +192,14 @@ a{color:#6B4A9B;text-decoration:none}a:hover{color:#3D1F5C}
     <!-- Horizontal -->
     <div style="background:#EFEAF3;aspect-ratio:4/3;display:flex;flex-direction:column;justify-content:space-between;padding:20px">
       <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">B · Horizontal</span>
-      <div style="display:flex;align-items:center;justify-content:center;gap:22px">
-        <div style="position:relative;width:54px;flex:none;container-type:inline-size">
+      <div style="display:flex;align-items:center;justify-content:center;gap:clamp(12px,4vw,22px)">
+        <div style="position:relative;width:clamp(38px,11vw,54px);flex:none;container-type:inline-size">
           <svg viewBox="0 0 100 150" style="display:block;width:100%;height:auto"><rect x="1" y="1" width="98" height="148" rx="49" style="fill:none;stroke:url(#gold);stroke-width:1.8"></rect><rect x="6" y="6" width="88" height="138" rx="44" style="fill:none;stroke:url(#gold);stroke-width:1"></rect></svg>
           <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-weight:400;font-size:78cqw;line-height:1;color:#3D1F5C;padding-top:4cqw">A</div>
         </div>
         <div style="width:1px;align-self:stretch;background:linear-gradient(#B8892E00,#B8892E,#B8892E00)"></div>
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div style="font-family:'Italiana',serif;font-size:clamp(24px,3vw,34px);white-space:nowrap;letter-spacing:.12em;color:#3D1F5C;line-height:1">ARYANNE LIRA</div>
+          <div style="font-family:'Italiana',serif;font-size:clamp(16px,4.4vw,34px);white-space:nowrap;letter-spacing:.12em;color:#3D1F5C;line-height:1">ARYANNE LIRA</div>
           <div style="font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:#6B4A9B">Estética Avançada</div>
         </div>
       </div>
@@ -617,7 +617,7 @@ class Component extends DCLogic {
         h('div', { style: letterStyle }, 'A'))
     ];
     if (kind !== 'shine' || true) {
-      children.push(h('div', { key: 'wm', style: { fontFamily: "'Italiana',serif", fontSize: size * .44, letterSpacing: '.14em', color: '#F8F5F1', lineHeight: 1, whiteSpace: 'nowrap', ...(draw ? { opacity: 0, animation: `al-track ${d(1.4)} cubic-bezier(.2,.7,.2,1) ${d(1.9)} forwards` } : {}) } }, 'ARYANNE LIRA'));
+      children.push(h('div', { key: 'wm', style: { fontFamily: "'Italiana',serif", fontSize: `clamp(${(size*0.30).toFixed(1)}px, 9.2vw, ${(size*0.44).toFixed(2)}px)`, letterSpacing: '.14em', color: '#F8F5F1', lineHeight: 1, whiteSpace: 'nowrap', ...(draw ? { opacity: 0, animation: `al-track ${d(1.4)} cubic-bezier(.2,.7,.2,1) ${d(1.9)} forwards` } : {}) } }, 'ARYANNE LIRA'));
       children.push(h('div', { key: 'tg', style: { fontFamily: "'Jost',sans-serif", fontSize: Math.max(10, size * .12), letterSpacing: '.46em', paddingLeft: '.46em', whiteSpace: 'nowrap', textTransform: 'uppercase', color: '#CBBBE3', ...(draw ? { opacity: 0, animation: `al-fade ${d(1)} ease ${d(2.8)} forwards` } : {}) } }, 'Estética Avançada'));
     }
     return h('div', { key: key + '-' + this.state.k, style: { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: size * .16 } }, children);
