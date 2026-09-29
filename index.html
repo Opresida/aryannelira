@@ -23,6 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+  @font-face{font-family:'TAN Pearl';src:url('/assets/fontes/TAN-Pearl.woff2') format('woff2'),url('/assets/fontes/TAN-Pearl.otf') format('opentype');font-display:swap}
   :root{ color-scheme: light; }
   body{background:#F8F5F1;color:#1F1030;font-family:'Jost',sans-serif;margin:0;padding-block:0 60px;padding-inline:16px;line-height:1.6;font-size:15px;font-weight:300}
   .wrap{max-width:1040px;margin:0 auto}
@@ -36,10 +37,10 @@
   #boot.go .al-o{animation:alDraw 1.7s cubic-bezier(.6,0,.2,1) forwards}
   #boot.go .al-i{animation:alDraw 1.7s cubic-bezier(.6,0,.2,1) .3s forwards}
   @keyframes alDraw{to{stroke-dashoffset:0}}
-  #boot .al-a{font-family:'Cormorant Garamond',serif;font-weight:500;fill:#F8F5F1;opacity:0}
+  #boot .al-a{font-family:'TAN Pearl','Cormorant Garamond',serif;font-weight:500;fill:#F8F5F1;opacity:0}
   #boot.go .al-a{animation:alRise .9s ease 1.25s forwards}
   @keyframes alRise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-  #boot .btname{font-family:'Cormorant Garamond',serif;font-size:34px;letter-spacing:.18em;color:#F8F5F1;opacity:0}
+  #boot .btname{font-family:'TAN Pearl','Cormorant Garamond',serif;font-size:34px;letter-spacing:.18em;color:#F8F5F1;opacity:0}
   #boot.go .btname{animation:alRise .9s ease 1.6s forwards}
   #boot .bttag{font-family:'Jost';font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:#B8892E;opacity:0}
   #boot.go .bttag{animation:alRise .9s ease 1.9s forwards}
@@ -51,7 +52,7 @@
   .sub{max-width:60ch;color:#3D1F5C;font-size:16px}
   .sub b{font-weight:500}
   .client{display:flex;align-items:center;gap:14px;margin-top:24px;flex-wrap:wrap}
-  .badge{width:56px;height:74px;border-radius:9999px;border:2px solid transparent;background:linear-gradient(#F8F5F1,#F8F5F1) padding-box,linear-gradient(160deg,#6E4E1A,#E4C57A,#B8892E,#F2DC97) border-box;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:34px;color:#3D1F5C}
+  .badge{width:56px;height:74px;border-radius:9999px;border:2px solid transparent;background:linear-gradient(#F8F5F1,#F8F5F1) padding-box,linear-gradient(160deg,#6E4E1A,#E4C57A,#B8892E,#F2DC97) border-box;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-size:34px;color:#3D1F5C}
   .who{font-size:14px;color:#3D1F5C}.who b{color:#1F1030;font-weight:500}
   /* stats */
   .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin:30px 0 6px}
