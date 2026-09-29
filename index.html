@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1F1030">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dra. Aryanne Lira - Estetica Avancada">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://aryannelira.vercel.app/">
+<meta property="og:title" content="Plano Editorial - Dra. Aryanne Lira">
+<meta property="og:description" content="Beleza guiada pela ciencia - um mes de conteudo educativo, do mito a avaliacao, com naturalidade e verdade.">
+<meta property="og:image" content="https://aryannelira.vercel.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Plano Editorial - Dra. Aryanne Lira">
+<meta name="twitter:description" content="Beleza guiada pela ciencia - um mes de conteudo educativo.">
+<meta name="twitter:image" content="https://aryannelira.vercel.app/og.jpg">
+<title>Plano Editorial Aryanne Lira</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ color-scheme: light; }
+  body{background:#F8F5F1;color:#1F1030;font-family:'Jost',sans-serif;margin:0;padding-block:0 60px;padding-inline:16px;line-height:1.6;font-size:15px;font-weight:300}
+  .wrap{max-width:1040px;margin:0 auto}
+  .bar{height:4px;margin:0 -16px;background:linear-gradient(90deg,#6E4E1A,#E4C57A,#B8892E,#F2DC97)}
+  a{color:#6B4A9B}
+  /* boot loader — logo animada da Aryanne (moldura que se desenha) */
+  #boot{position:fixed;inset:0;z-index:9999;background:#1F1030;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transition:opacity .7s ease}
+  #boot.out{opacity:0;pointer-events:none}
+  #boot svg{width:150px;height:auto;overflow:visible}
+  #boot .al-o,#boot .al-i{fill:none;stroke:url(#alGold);stroke-dasharray:1;stroke-dashoffset:1}
+  #boot.go .al-o{animation:alDraw 1.7s cubic-bezier(.6,0,.2,1) forwards}
+  #boot.go .al-i{animation:alDraw 1.7s cubic-bezier(.6,0,.2,1) .3s forwards}
+  @keyframes alDraw{to{stroke-dashoffset:0}}
+  #boot .al-a{font-family:'Cormorant Garamond',serif;font-weight:500;fill:#F8F5F1;opacity:0}
+  #boot.go .al-a{animation:alRise .9s ease 1.25s forwards}
+  @keyframes alRise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  #boot .btname{font-family:'Cormorant Garamond',serif;font-size:34px;letter-spacing:.18em;color:#F8F5F1;opacity:0}
+  #boot.go .btname{animation:alRise .9s ease 1.6s forwards}
+  #boot .bttag{font-family:'Jost';font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:#B8892E;opacity:0}
+  #boot.go .bttag{animation:alRise .9s ease 1.9s forwards}
+  /* header */
+  header{padding:46px 0 8px}
+  .eyebrow{font-family:'Jost';font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:#B8892E;font-weight:500}
+  h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(34px,6vw,56px);line-height:1.1;margin:18px 0 12px;color:#1F1030}
+  h1 .em{font-style:italic;color:#B8892E}
+  .sub{max-width:60ch;color:#3D1F5C;font-size:16px}
+  .sub b{font-weight:500}
+  .client{display:flex;align-items:center;gap:14px;margin-top:24px;flex-wrap:wrap}
+  .badge{width:56px;height:74px;border-radius:9999px;border:2px solid transparent;background:linear-gradient(#F8F5F1,#F8F5F1) padding-box,linear-gradient(160deg,#6E4E1A,#E4C57A,#B8892E,#F2DC97) border-box;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:34px;color:#3D1F5C}
+  .who{font-size:14px;color:#3D1F5C}.who b{color:#1F1030;font-weight:500}
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin:30px 0 6px}
+  .st{border:1px solid #E7DFD5;border-radius:14px;background:#fff;padding:16px 18px}
+  .st .v{font-family:'Cormorant Garamond',serif;font-size:34px;color:#3D1F5C;line-height:1}
+  .st .k{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8a7fa0;margin-top:6px}
+  .note{border:1px solid #E7DFD5;border-left:3px solid #B8892E;border-radius:0 10px 10px 0;background:#fff;padding:14px 18px;font-size:13px;color:#3D1F5C;margin:22px 0 4px}
+  .note b{color:#B8892E;font-weight:500}
+  .bblink{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:13px;letter-spacing:.06em;color:#3D1F5C;border:1px solid #B8892E;border-radius:9999px;padding:10px 20px;text-decoration:none}
+  /* seções */
+  h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;color:#1F1030;margin:48px 0 4px}
+  .wsub{color:#8a7fa0;font-size:12px;margin:0 0 16px;letter-spacing:.04em}
+  .fio{height:1px;background:linear-gradient(90deg,#B8892E,transparent);margin:10px 0 20px;border:0}
+  .days{display:flex;flex-direction:column;gap:14px}
+  .day{border:1px solid #E7DFD5;border-radius:16px;background:#fff;padding:18px}
+  .dhead{display:grid;grid-template-columns:70px 1fr;gap:16px}
+  .date{text-align:center;border-right:1px solid #EFEAF3;padding-right:12px}
+  .date .d{font-family:'Cormorant Garamond',serif;font-size:30px;color:#3D1F5C;line-height:1}
+  .date .m{font-size:10px;letter-spacing:.2em;color:#8a7fa0;text-transform:uppercase;margin-top:4px}
+  .date .w{font-size:10px;color:#c0b6ce;text-transform:uppercase;margin-top:2px}
+  .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:7px}
+  .tag{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border-radius:9999px;padding:4px 12px}
+  .t-car{background:#F3ECFa;color:#6B4A9B;border:1px solid #d9cbe9}
+  .t-est{background:#FBF4E6;color:#B8892E;border:1px solid #ecdcba}
+  .fmt{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#8a7fa0}
+  .day h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;color:#1F1030;margin:2px 0 4px}
+  .hook{font-size:13px;color:#6b6577;margin:0}
+  .strip{display:flex;gap:8px;overflow-x:auto;margin-top:14px;padding-bottom:6px;scroll-snap-type:x proximity}
+  .strip img{height:clamp(150px,24vw,230px);aspect-ratio:4/5;object-fit:cover;border-radius:10px;border:1px solid #E7DFD5;cursor:pointer;flex:0 0 auto;scroll-snap-align:start}
+  .strip img:first-child{border-color:#B8892E}
+  #lb{position:fixed;inset:0;background:rgba(20,10,30,.92);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out;padding:20px}
+  #lb img{max-height:92vh;max-width:94vw;border-radius:12px}
+  /* rodapé — MAZARI principal */
+  footer{margin-top:60px;border-top:1px solid #E7DFD5;padding-top:24px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+  .mz{font-family:'Cormorant Garamond',serif;font-size:26px;letter-spacing:.02em;color:#1F1030;display:flex;align-items:baseline;gap:3px}
+  .mz i{width:7px;height:7px;border-radius:50%;background:#B8892E;display:inline-block}
+  .mz small{font-family:'Jost';font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:#8a7fa0;margin-left:8px}
+  .fnote{font-size:11px;color:#a99fb8;letter-spacing:.08em}
+  @media (max-width:520px){.dhead{grid-template-columns:52px 1fr;gap:12px}.date .d{font-size:22px}}
+</style>
+</head>
+<body>
+<div id="boot">
+  <svg viewBox="0 0 100 150" aria-hidden="true">
+    <defs><linearGradient id="alGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6E4E1A"/><stop offset=".4" stop-color="#E4C57A"/><stop offset=".7" stop-color="#B8892E"/><stop offset="1" stop-color="#F2DC97"/>
+    </linearGradient></defs>
+    <rect class="al-o" x="1" y="1" width="98" height="148" rx="49" pathLength="1" stroke-width="1.4"/>
+    <rect class="al-i" x="6" y="6" width="88" height="138" rx="44" pathLength="1" stroke-width="0.8"/>
+    <text class="al-a" x="50" y="97" text-anchor="middle" font-size="70">A</text>
+  </svg>
+  <div class="btname">ARYANNE LIRA</div>
+  <div class="bttag">Estética Avançada</div>
+</div>
+
+<div class="bar"></div>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Plano Editorial · Outubro 2026</div>
+  <h1>Um mês de conteúdo que <span class="em">educa</span> antes de convidar.</h1>
+  <p class="sub">Este é o plano editorial da <b>Dra. Aryanne Lira</b> — dia a dia, peça por peça. Cada carrossel e cada arte já estão prontos e visíveis aqui. Toque em qualquer imagem para ampliar.</p>
+  <div class="client">
+    <div class="badge">A</div>
+    <div class="who"><b>Dra. Aryanne Lira · Estética Avançada</b><br>Beleza guiada pela ciência · @aryannelira</div>
+  </div>
+  <a class="bblink" href="/brandbook">Ver o brandbook completo →</a>
+</header>
+
+<div class="stats">
+  <div class="st"><div class="v">25</div><div class="k">Publicações no mês</div></div>
+  <div class="st"><div class="v">13</div><div class="k">Carrosséis</div></div>
+  <div class="st"><div class="v">12</div><div class="k">Frases autorais</div></div>
+  <div class="st"><div class="v">78</div><div class="k">Artes finalizadas</div></div>
+</div>
+
+<div class="note"><b>Como ler:</b> cada dia mostra a peça completa — deslize a fileira para ver todos os cards do carrossel, como sairão no Instagram. Conteúdo dentro das boas práticas de publicidade médica: educar, com naturalidade e sem promessa de resultado.</div>
+
+<h2>Publicação de apresentação</h2><p class="wsub">Fixada no topo do perfil · dá rosto e autoridade à conta</p><hr class="fio">
+<div class="days"><div class="day"><div class="dhead">
+  <div class="date"><div class="d">★</div><div class="m">Pin</div><div class="w">Topo</div></div>
+  <div><div class="meta"><span class="tag t-car">CARROSSEL</span><span class="fmt">Autoridade</span></div>
+  <h3>Conheça a Dra. Aryanne Lira</h3><p class="hook">Quem vai cuidar de você — os 3 pilares, a segurança e o convite à avaliação.</p></div></div>
+  <div class="strip"><img loading="lazy" src="car13/01.jpg"><img loading="lazy" src="car13/02.jpg"><img loading="lazy" src="car13/03.jpg"><img loading="lazy" src="car13/04.jpg"><img loading="lazy" src="car13/05.jpg"></div>
+</div></div>
+
+<div id="grade"></div>
+
+<footer>
+  <div class="mz">MAZARI<i></i><small>Engenharia Digital · Conteúdo</small></div>
+  <div class="fnote">Plano vivo — atualizado ao longo do mês · mazaricorp.com</div>
+</footer>
+</div>
+<div id="lb"><img alt=""></div>
+
+<script>
+const CAR = {car:['CARROSSEL','t-car']}, EST = {est:['ESTÁTICO','t-est']};
+const weeks = [
+ { t:'Semana 1', s:'01 → 04 out · Abertura educativa', days:[
+  ['01','OUT','QUA','car','Educativo','Botox não congela o rosto (excesso, sim)','A toxina relaxa músculos específicos — não a expressão.',['car01',5]],
+  ['02','OUT','QUI','est','Autoridade','"Um rosto mais descansado, com a sua expressão de sempre."','A promessa central da marca, em uma frase.',['est','e01']],
+  ['03','OUT','SEX','car','Educativo','Preenchimento labial: 3 mitos','Artificial, dor e "todo mundo percebe" — desfeitos.',['car02',5]],
+  ['04','OUT','SÁB','est','Convite','"Agenda de outubro aberta para avaliações."','Convite suave, sem promoção.',['est','e02']]
+ ]},
+ { t:'Semana 2', s:'06 → 11 out · Colágeno e firmeza', days:[
+  ['06','OUT','SEG','car','Educativo','Colágeno não se repõe com creme. Se estimula.','O que o bioestimulador realmente faz.',['car03',5]],
+  ['07','OUT','TER','est','Autoridade','"O melhor resultado é o que ninguém aponta — apenas percebe."','O princípio da naturalidade.',['est','e03']],
+  ['08','OUT','QUA','car','Educativo','5 sinais de que sua pele pede colágeno','Autodiagnóstico gentil que leva à avaliação.',['car04',6]],
+  ['09','OUT','QUI','est','Educativo','"Naturalidade não é fazer pouco. É fazer certo."','Reposiciona o conceito de natural.',['est','e04']],
+  ['10','OUT','SEX','car','Educativo','Ultrassom microfocado: firmeza sem cirurgia','Lifting sem corte, camadas profundas.',['car05',5]],
+  ['11','OUT','SÁB','est','Autoridade','"Realçar, nunca transformar em outra pessoa."','O manifesto da clínica.',['est','e05']]
+ ]},
+ { t:'Semana 3', s:'13 → 18 out · Diagnóstico e harmonia', days:[
+  ['13','OUT','SEG','car','Educativo','Olheiras: nem todo caso é preenchimento','Os 3 tipos e o caminho de cada um.',['car06',5]],
+  ['14','OUT','TER','est','Convite','"Seu rosto merece uma avaliação, não um palpite."','Valor do diagnóstico.',['est','e06']],
+  ['15','OUT','QUA','car','Educativo','Rinomodelação: harmonia do nariz sem cirurgia','O que faz — e, com honestidade, o que não faz.',['car07',5]],
+  ['16','OUT','QUI','est','Autoridade','"Técnica sem anatomia é sorte. E sorte não é protocolo."','Autoridade científica.',['est','e07']],
+  ['17','OUT','SEX','car','Educativo','Começar aos 20+ é cedo demais?','Prevenção ≠ exagero.',['car08',5]],
+  ['18','OUT','SÁB','est','Educativo','"O resultado bom respeita o tempo do seu colágeno."','Expectativa realista.',['est','e08']]
+ ]},
+ { t:'Semana 4', s:'20 → 25 out · Verdade e segurança', days:[
+  ['20','OUT','SEG','car','Educativo','Harmonização não é padronização','Contra o "mesmo rosto" — identidade preservada.',['car09',5]],
+  ['21','OUT','TER','est','Autoridade','"Meu trabalho é que digam que você está descansada."','A frase-assinatura da Dra.',['est','e09']],
+  ['22','OUT','QUA','car','Educativo','5 perguntas antes de deixar te aplicar','Segurança do paciente em primeiro lugar.',['car10',5]],
+  ['23','OUT','QUI','est','Educativo','"Produto de procedência tem nome, lote e origem."','Educação sobre segurança.',['est','e10']],
+  ['24','OUT','SEX','car','Educativo','Contorno: sustentação, não volume','Mandíbula e mento como pilares.',['car11',5]],
+  ['25','OUT','SÁB','est','Convite','"A avaliação é onde tudo começa — inclusive o não."','Honestidade que gera confiança.',['est','e11']]
+ ]},
+ { t:'Semana 5', s:'27 → 28 out · Qualidade de pele', days:[
+  ['27','OUT','SEG','car','Educativo','Microagulhamento e peelings: renovar sem agredir','A base de tudo: pele saudável.',['car12',5]],
+  ['28','OUT','TER','est','Autoridade','"Beleza guiada pela ciência."','A assinatura da marca fecha o ciclo.',['est','e12']]
+ ]}
+];
+function gallery(g){
+  if (g[0]==='est') return `<div class="strip"><img loading="lazy" src="est/${g[1]}.jpg" alt=""></div>`;
+  const [pc,n]=g; let s='<div class="strip">';
+  for(let i=1;i<=n;i++) s+=`<img loading="lazy" src="${pc}/${String(i).padStart(2,'0')}.jpg" alt="">`;
+  return s+'</div>';
+}
+document.getElementById('grade').innerHTML = weeks.map(w=>`
+  <h2>${w.t}</h2><p class="wsub">${w.s}</p><hr class="fio">
+  <div class="days">${w.days.map(d=>{
+    const [dd,mm,wd,fmt,pilar,title,hook,g]=d;
+    const T = fmt==='car'?CAR.car:EST.est;
+    return `<div class="day"><div class="dhead">
+      <div class="date"><div class="d">${dd}</div><div class="m">${mm}</div><div class="w">${wd}</div></div>
+      <div><div class="meta"><span class="tag ${T[1]}">${T[0]}</span><span class="fmt">${pilar}</span></div>
+      <h3>${title}</h3><p class="hook">${hook}</p></div></div>
+      ${gallery(g)}</div>`;
+  }).join('')}`).join('');
+const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+document.addEventListener('click',e=>{if(e.target.matches('.strip img')){lbi.src=e.target.src;lb.style.display='flex';}else if(e.target===lb||e.target===lbi){lb.style.display='none';}});
+// dispara boot
+requestAnimationFrame(()=>{document.getElementById('boot').classList.add('go');
+  setTimeout(()=>{const b=document.getElementById('boot');b.classList.add('out');setTimeout(()=>b.remove(),750);},3200);});
+</script>
+</body>
+</html>

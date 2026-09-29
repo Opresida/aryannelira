@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Italiana&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F8F5F1;color:#1F1030;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#6B4A9B;text-decoration:none}a:hover{color:#3D1F5C}
+@font-face{font-family:'TAN Pearl';src:local('TAN Pearl'),local('TANPearl-Regular'),url('fonts/TAN-Pearl.woff2') format('woff2'),url('fonts/TAN-Pearl.otf') format('opentype');font-display:swap}
+@keyframes al-draw{to{stroke-dashoffset:0}}
+@keyframes al-rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes al-track{from{opacity:0;letter-spacing:.42em}to{opacity:1;letter-spacing:.14em}}
+@keyframes al-fade{from{opacity:0}to{opacity:1}}
+@keyframes al-orbit{from{stroke-dashoffset:0}to{stroke-dashoffset:-1}}
+@keyframes al-sheen{0%{background-position:160% 0}60%,100%{background-position:-60% 0}}
+</style>
+</helmet>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" style="stop-color:#6E4E1A"></stop>
+      <stop offset=".4" style="stop-color:#E4C57A"></stop>
+      <stop offset=".7" style="stop-color:#B8892E"></stop>
+      <stop offset="1" style="stop-color:#F2DC97"></stop>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div style="font-family:'Jost',sans-serif;font-weight:300;font-size:16px;line-height:1.6">
+
+<!-- CAPA -->
+<section data-screen-label="00 Capa" style="min-height:92vh;background:radial-gradient(120% 90% at 50% 0%,#4A2870 0%,#2A1545 45%,#1A0E2C 100%);color:#F8F5F1;display:flex;flex-direction:column;justify-content:space-between;padding:32px clamp(20px,5vw,64px)">
+  <div style="display:flex;justify-content:space-between;gap:16px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#CBBBE3">
+    <span>Brandbook</span><span>Edição 01 · 2026</span>
+  </div>
+  <div style="display:flex;justify-content:center;padding:48px 0">{{ coverLogo }}</div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+    <p style="margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,2.6vw,32px);line-height:1.25;max-width:460px;color:#EFEAF3;text-wrap:pretty">Beleza guiada pela ciência. Resultado que respeita quem você é.</p>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#CBBBE3"><span>@aryannelira</span><a href="https://github.com/Opresida/aryannelira" target="_blank" style="color:#E4C57A;text-transform:none;letter-spacing:.08em" style-hover="color:#F8F5F1">github.com/Opresida/aryannelira</a></div>
+  </div>
+</section>
+
+<!-- ÍNDICE -->
+<section style="padding:64px clamp(20px,5vw,64px);max-width:1280px;margin:0 auto">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:4px 32px;font-size:14px;letter-spacing:.08em">
+    <a href="#s01" style="display:flex;gap:14px;padding:10px 0;border-bottom:1px solid #E3DAEA;color:#1F1030"><span style="color:#B8892E">01</span>Essência</a>
+    <a href="#s02" style="display:flex;gap:14px;padding:10px 0;border-bottom:1px solid #E3DAEA;color:#1F1030"><span style="color:#B8892E">02</span>Tom de voz</a>
+    <a href="#s03" style="display:flex;gap:14px;padding:10px 0;border-bottom:1px solid #E3DAEA;color:#1F1030"><span style="color:#B8892E">03</span>Logo e versões</a>
+    <a href="#s04" style="display:flex;gap:14px;padding:10px 0;border-bottom:1px solid #E3DAEA;color:#1F1030"><span style="color:#B8892E">04</span>Logo animada</a>
+    <a href="#s05" style="display:flex;gap:14px;padding:10px 0;border-bottom:1px solid #E3DAEA;color:#1F1030"><span style="color:#B8892E">05</span>Cores</a>
+    <a href="#s06" style="display:flex;gap:14px;padding:10px 0;border-bottom:1px solid #E3DAEA;color:#1F1030"><span style="color:#B8892E">06</span>Tipografia</a>
+    <a href="#s07" style="display:flex;gap:14px;padding:10px 0;border-bottom:1px solid #E3DAEA;color:#1F1030"><span style="color:#B8892E">07</span>Elementos gráficos</a>
+    <a href="#s08" style="display:flex;gap:14px;padding:10px 0;border-bottom:1px solid #E3DAEA;color:#1F1030"><span style="color:#B8892E">08</span>Fotografia</a>
+    <a href="#s09" style="display:flex;gap:14px;padding:10px 0;border-bottom:1px solid #E3DAEA;color:#1F1030"><span style="color:#B8892E">09</span>Instagram</a>
+    <a href="#s10" style="display:flex;gap:14px;padding:10px 0;border-bottom:1px solid #E3DAEA;color:#1F1030"><span style="color:#B8892E">10</span>Destaques</a>
+    <a href="#s11" style="display:flex;gap:14px;padding:10px 0;border-bottom:1px solid #E3DAEA;color:#1F1030"><span style="color:#B8892E">11</span>Aplicações</a>
+  </div>
+</section>
+
+<!-- 01 ESSÊNCIA -->
+<section id="s01" data-screen-label="01 Essência" style="padding:48px clamp(20px,5vw,64px) 96px;max-width:1280px;margin:0 auto">
+  <div style="display:flex;gap:16px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B;border-top:1px solid #1F1030;padding-top:16px"><span style="color:#B8892E">01</span><span>Essência</span></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;margin-top:40px">
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,5vw,68px);line-height:1.02;letter-spacing:-.01em;text-wrap:balance">Realçar, nunca transformar em outra pessoa.</h2>
+    <div style="display:flex;flex-direction:column;gap:18px;font-size:17px;color:#3A2B4A;max-width:560px">
+      <p style="margin:0;text-wrap:pretty">A Aryanne Lira Estética Avançada existe para mulheres que querem se olhar no espelho e se reconhecer — só que mais descansadas, mais firmes, mais confiantes.</p>
+      <p style="margin:0;text-wrap:pretty">Unimos protocolos com base científica, olhar anatômico e escuta atenta. Cada procedimento começa por uma pergunta: o que faz sentido para o seu rosto?</p>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2px;margin-top:64px;background:#E3DAEA">
+    <div style="background:#F8F5F1;padding:32px 28px 36px;display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:#B8892E">i.</span>
+      <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:30px">Naturalidade</h3>
+      <p style="margin:0;color:#4E3F5E;text-wrap:pretty">O melhor resultado é aquele que ninguém aponta — apenas percebe.</p>
+    </div>
+    <div style="background:#F8F5F1;padding:32px 28px 36px;display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:#B8892E">ii.</span>
+      <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:30px">Ciência</h3>
+      <p style="margin:0;color:#4E3F5E;text-wrap:pretty">Técnica, anatomia e produtos de procedência. Nada de promessa sem fundamento.</p>
+    </div>
+    <div style="background:#F8F5F1;padding:32px 28px 36px;display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:#B8892E">iii.</span>
+      <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:30px">Acolhimento</h3>
+      <p style="margin:0;color:#4E3F5E;text-wrap:pretty">Tempo para ouvir, explicar e acompanhar. A paciente decide com segurança.</p>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;margin-top:56px">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">Público</span>
+      <p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.3">Mulheres de 22 a 55 anos, da prevenção ao rejuvenescimento.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">Assinatura</span>
+      <p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.3;font-style:italic">“Beleza guiada pela ciência.”</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">Procedimentos</span>
+      <p style="margin:0;font-size:15px;color:#4E3F5E">Toxina botulínica · Preenchimentos (rinomodelação, mento, mandíbula, MD Codes, olheiras, lábios) · Bioestimulador de colágeno · Ultrassom microfocado · Microagulhamento · Peelings</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 TOM DE VOZ -->
+<section id="s02" data-screen-label="02 Tom de voz" style="background:#EFEAF3;padding:80px clamp(20px,5vw,64px) 96px">
+  <div style="max-width:1280px;margin:0 auto">
+    <div style="display:flex;gap:16px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B;border-top:1px solid #1F1030;padding-top:16px"><span style="color:#B8892E">02</span><span>Tom de voz</span></div>
+    <h2 style="margin:40px 0 0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(36px,4.4vw,56px);line-height:1.05;max-width:820px;text-wrap:balance">Fala como uma especialista que é, também, uma amiga próxima.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px;margin-top:48px">
+      <div style="background:#F8F5F1;padding:28px;display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#3D1F5C;font-weight:500">Somos</span>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="padding:6px 14px;border:1px solid #6B4A9B;border-radius:40px;font-size:14px">Acolhedora</span>
+          <span style="padding:6px 14px;border:1px solid #6B4A9B;border-radius:40px;font-size:14px">Técnica, sem jargão</span>
+          <span style="padding:6px 14px;border:1px solid #6B4A9B;border-radius:40px;font-size:14px">Sofisticada</span>
+          <span style="padding:6px 14px;border:1px solid #6B4A9B;border-radius:40px;font-size:14px">Honesta</span>
+          <span style="padding:6px 14px;border:1px solid #6B4A9B;border-radius:40px;font-size:14px">Segura</span>
+        </div>
+      </div>
+      <div style="background:#F8F5F1;padding:28px;display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#8A7A96;font-weight:500">Não somos</span>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;color:#8A7A96">
+          <span style="padding:6px 14px;border:1px solid #C9BFD2;border-radius:40px;font-size:14px;text-decoration:line-through">Milagrosa</span>
+          <span style="padding:6px 14px;border:1px solid #C9BFD2;border-radius:40px;font-size:14px;text-decoration:line-through">Apelativa</span>
+          <span style="padding:6px 14px;border:1px solid #C9BFD2;border-radius:40px;font-size:14px;text-decoration:line-through">Fria</span>
+          <span style="padding:6px 14px;border:1px solid #C9BFD2;border-radius:40px;font-size:14px;text-decoration:line-through">Promocional</span>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;margin-top:40px;border-top:1px solid #CBBBE3">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px 32px;padding:22px 0;border-bottom:1px solid #CBBBE3">
+        <span style="color:#8A7A96;text-decoration:line-through">“Fique 10 anos mais jovem em uma sessão!”</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.3">“Um rosto mais descansado, com a sua expressão de sempre.”</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px 32px;padding:22px 0;border-bottom:1px solid #CBBBE3">
+        <span style="color:#8A7A96;text-decoration:line-through">“PROMOÇÃO IMPERDÍVEL de botox!!!”</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.3">“Agenda de outubro aberta para avaliações.”</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px 32px;padding:22px 0;border-bottom:1px solid #CBBBE3">
+        <span style="color:#8A7A96;text-decoration:line-through">“Aplicação de ácido hialurônico reticulado em plano supraperiosteal.”</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.3">“O preenchimento devolve sustentação onde o rosto perdeu volume.”</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 LOGO -->
+<section id="s03" data-screen-label="03 Logo" style="padding:80px clamp(20px,5vw,64px) 96px;max-width:1280px;margin:0 auto">
+  <div style="display:flex;gap:16px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B;border-top:1px solid #1F1030;padding-top:16px"><span style="color:#B8892E">03</span><span>Logo e versões</span></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:32px;margin-top:40px;align-items:end">
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(36px,4.4vw,56px);line-height:1.05;text-wrap:balance">A moldura em arco, o A e o ouro.</h2>
+    <p style="margin:0;color:#4E3F5E;max-width:520px;text-wrap:pretty">O arco evoca espelho e portal: o momento em que a paciente se vê. A moldura dupla em ouro traz o acabamento de alta joalheria; o monograma A é o coração da marca e funciona sozinho em espaços pequenos.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:16px;margin-top:48px">
+    <!-- Principal claro -->
+    <div style="background:#F8F5F1;border:1px solid #E3DAEA;aspect-ratio:4/3;display:flex;flex-direction:column;justify-content:space-between;padding:20px">
+      <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">A · Principal vertical — positiva</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+        <div style="position:relative;width:88px;container-type:inline-size">
+          <svg viewBox="0 0 100 150" style="display:block;width:100%;height:auto"><rect x="1" y="1" width="98" height="148" rx="49" style="fill:none;stroke:url(#gold);stroke-width:1.4"></rect><rect x="5" y="5" width="90" height="140" rx="45" style="fill:none;stroke:url(#gold);stroke-width:.8"></rect></svg>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-weight:400;font-size:78cqw;line-height:1;color:#3D1F5C;padding-top:4cqw">A</div>
+        </div>
+        <div style="font-family:'Italiana',serif;font-size:clamp(30px,4vw,44px);white-space:nowrap;letter-spacing:.14em;color:#3D1F5C;line-height:1;padding-left:.14em">ARYANNE LIRA</div>
+        <div style="font-size:11px;letter-spacing:.46em;white-space:nowrap;text-transform:uppercase;color:#6B4A9B;padding-left:.46em;font-weight:400">Estética Avançada</div>
+      </div>
+      <span></span>
+    </div>
+    <!-- Principal escuro -->
+    <div style="background:linear-gradient(145deg,#3D1F5C,#1F1030 70%);aspect-ratio:4/3;display:flex;flex-direction:column;justify-content:space-between;padding:20px">
+      <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#CBBBE3">A · Principal vertical — negativa</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+        <div style="position:relative;width:88px;container-type:inline-size">
+          <svg viewBox="0 0 100 150" style="display:block;width:100%;height:auto"><rect x="1" y="1" width="98" height="148" rx="49" style="fill:none;stroke:url(#gold);stroke-width:1.4"></rect><rect x="5" y="5" width="90" height="140" rx="45" style="fill:none;stroke:url(#gold);stroke-width:.8"></rect></svg>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-weight:400;font-size:78cqw;line-height:1;color:#F8F5F1;padding-top:4cqw">A</div>
+        </div>
+        <div style="font-family:'Italiana',serif;font-size:clamp(30px,4vw,44px);white-space:nowrap;letter-spacing:.14em;color:#F8F5F1;line-height:1;padding-left:.14em">ARYANNE LIRA</div>
+        <div style="font-size:11px;letter-spacing:.46em;white-space:nowrap;text-transform:uppercase;color:#CBBBE3;padding-left:.46em;font-weight:400">Estética Avançada</div>
+      </div>
+      <span></span>
+    </div>
+    <!-- Horizontal -->
+    <div style="background:#EFEAF3;aspect-ratio:4/3;display:flex;flex-direction:column;justify-content:space-between;padding:20px">
+      <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">B · Horizontal</span>
+      <div style="display:flex;align-items:center;justify-content:center;gap:22px">
+        <div style="position:relative;width:54px;flex:none;container-type:inline-size">
+          <svg viewBox="0 0 100 150" style="display:block;width:100%;height:auto"><rect x="1" y="1" width="98" height="148" rx="49" style="fill:none;stroke:url(#gold);stroke-width:1.8"></rect><rect x="6" y="6" width="88" height="138" rx="44" style="fill:none;stroke:url(#gold);stroke-width:1"></rect></svg>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-weight:400;font-size:78cqw;line-height:1;color:#3D1F5C;padding-top:4cqw">A</div>
+        </div>
+        <div style="width:1px;align-self:stretch;background:linear-gradient(#B8892E00,#B8892E,#B8892E00)"></div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'Italiana',serif;font-size:clamp(24px,3vw,34px);white-space:nowrap;letter-spacing:.12em;color:#3D1F5C;line-height:1">ARYANNE LIRA</div>
+          <div style="font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:#6B4A9B">Estética Avançada</div>
+        </div>
+      </div>
+      <span></span>
+    </div>
+    <!-- Monograma + Selo -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div style="background:#F8F5F1;border:1px solid #E3DAEA;display:flex;flex-direction:column;justify-content:space-between;padding:20px;gap:16px">
+        <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">C · Monograma</span>
+        <div style="display:flex;justify-content:center">
+          <div style="position:relative;width:min(90px,60%);container-type:inline-size">
+            <svg viewBox="0 0 100 150" style="display:block;width:100%;height:auto"><rect x="1" y="1" width="98" height="148" rx="49" style="fill:none;stroke:url(#gold);stroke-width:1.4"></rect><rect x="5" y="5" width="90" height="140" rx="45" style="fill:none;stroke:url(#gold);stroke-width:.8"></rect></svg>
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-weight:400;font-size:78cqw;line-height:1;color:#3D1F5C;padding-top:4cqw">A</div>
+          </div>
+        </div>
+        <span style="font-size:12px;color:#8A7A96">Favicon, carimbo, bordado</span>
+      </div>
+      <div style="background:#F8F5F1;border:1px solid #E3DAEA;display:flex;flex-direction:column;justify-content:space-between;padding:20px;gap:16px">
+        <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">D · Avatar</span>
+        <div style="display:flex;justify-content:center">
+          <div style="width:min(150px,85%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 30%,#5A3585,#2A1545 75%);display:flex;align-items:center;justify-content:center">
+            <div style="position:relative;width:34%;container-type:inline-size">
+              <svg viewBox="0 0 100 150" style="display:block;width:100%;height:auto"><rect x="1" y="1" width="98" height="148" rx="49" style="fill:none;stroke:url(#gold);stroke-width:2.2"></rect><rect x="7" y="7" width="86" height="136" rx="43" style="fill:none;stroke:url(#gold);stroke-width:1.2"></rect></svg>
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-weight:400;font-size:76cqw;line-height:1;color:#F8F5F1;padding-top:4cqw">A</div>
+            </div>
+          </div>
+        </div>
+        <span style="font-size:12px;color:#8A7A96">Foto de perfil @aryannelira</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px;margin-top:16px">
+    <div style="border:1px solid #E3DAEA;padding:20px;display:flex;flex-direction:column;gap:16px">
+      <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">Área de proteção</span>
+      <div style="display:flex;justify-content:center;padding:8px 0">
+        <div style="border:1px dashed #B8892E;padding:30px;position:relative">
+          <div style="position:relative;width:60px;container-type:inline-size;outline:1px solid #CBBBE3">
+            <svg viewBox="0 0 100 150" style="display:block;width:100%;height:auto"><rect x="1" y="1" width="98" height="148" rx="49" style="fill:none;stroke:url(#gold);stroke-width:1.6"></rect><rect x="5" y="5" width="90" height="140" rx="45" style="fill:none;stroke:url(#gold);stroke-width:.9"></rect></svg>
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-weight:400;font-size:78cqw;line-height:1;color:#3D1F5C;padding-top:4cqw">A</div>
+          </div>
+          <span style="position:absolute;top:6px;left:50%;transform:translateX(-50%);font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8892E">x</span>
+          <span style="position:absolute;left:10px;top:50%;transform:translateY(-50%);font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8892E">x</span>
+        </div>
+      </div>
+      <p style="margin:0;font-size:14px;color:#4E3F5E">x = metade da largura do arco. Nenhum elemento invade esse espaço.</p>
+    </div>
+    <div style="border:1px solid #E3DAEA;padding:20px;display:flex;flex-direction:column;gap:16px">
+      <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">Tamanho mínimo</span>
+      <div style="display:flex;align-items:flex-end;justify-content:center;gap:40px;padding:8px 0;flex:1">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+          <div style="font-family:'Italiana',serif;font-size:14px;letter-spacing:.14em;color:#3D1F5C">ARYANNE LIRA</div>
+          <span style="font-size:12px;color:#8A7A96">Vertical · 30 mm / 160 px</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+          <div style="position:relative;width:20px;container-type:inline-size">
+            <svg viewBox="0 0 100 150" style="display:block;width:100%;height:auto"><rect x="2" y="2" width="96" height="146" rx="48" style="fill:none;stroke:url(#gold);stroke-width:4"></rect></svg>
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-weight:400;font-size:78cqw;line-height:1;color:#3D1F5C">A</div>
+          </div>
+          <span style="font-size:12px;color:#8A7A96">Monograma · 8 mm / 32 px</span>
+        </div>
+      </div>
+      <p style="margin:0;font-size:14px;color:#4E3F5E">Abaixo de 16 mm, a moldura passa a ter linha única.</p>
+    </div>
+    <div style="border:1px solid #E3DAEA;padding:20px;display:flex;flex-direction:column;gap:16px">
+      <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">Evitar</span>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:13px;color:#4E3F5E">
+        <div style="display:flex;flex-direction:column;gap:6px"><div style="height:56px;background:#EFEAF3;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:'Italiana',serif;font-size:18px;color:#3D1F5C"><span style="display:inline-block;transform:scaleX(1.6)">A.LIRA</span></div>Distorcer</div>
+        <div style="display:flex;flex-direction:column;gap:6px"><div style="height:56px;background:#EFEAF3;display:flex;align-items:center;justify-content:center;font-family:'Italiana',serif;font-size:18px;color:#D64A8A">ARYANNE</div>Trocar cores</div>
+        <div style="display:flex;flex-direction:column;gap:6px"><div style="height:56px;background:#B39BD0;display:flex;align-items:center;justify-content:center;font-family:'Italiana',serif;font-size:18px;color:#CBBBE3">ARYANNE</div>Baixo contraste</div>
+        <div style="display:flex;flex-direction:column;gap:6px"><div style="height:56px;background:#EFEAF3;display:flex;align-items:center;justify-content:center;font-family:'Italiana',serif;font-size:18px;color:#3D1F5C;text-shadow:3px 3px 4px #0006">ARYANNE</div>Sombras e efeitos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 ANIMAÇÃO -->
+<section id="s04" data-screen-label="04 Animação" style="background:#1F1030;color:#F8F5F1;padding:80px clamp(20px,5vw,64px) 96px">
+  <div style="max-width:1280px;margin:0 auto">
+    <div style="display:flex;gap:16px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#CBBBE3;border-top:1px solid #6B4A9B;padding-top:16px"><span style="color:#E4C57A">04</span><span>Logo animada</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-top:40px">
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(36px,4.4vw,56px);line-height:1.05;max-width:640px;text-wrap:balance">Duas assinaturas em movimento.</h2>
+      <button onClick="{{ replay }}" style="font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;padding:14px 26px;border:1px solid #E4C57A;background:transparent;color:#F2DC97;cursor:pointer;border-radius:40px" style-hover="background:#E4C57A;color:#1F1030">Reproduzir ↻</button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:16px;margin-top:40px">
+      <div style="background:radial-gradient(100% 80% at 50% 20%,#43246A,#1F1030);aspect-ratio:1;display:flex;flex-direction:column;justify-content:space-between;padding:20px">
+        <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#CBBBE3">I · Desenho — abertura de Reels e vídeos (3,5 s)</span>
+        <div style="display:flex;justify-content:center">{{ animDraw }}</div>
+        <span style="font-size:13px;color:#A898BC">Moldura se desenha → A surge → nome se assenta.</span>
+      </div>
+      <div style="background:radial-gradient(100% 80% at 50% 20%,#2F2F72,#1A1030);aspect-ratio:1;display:flex;flex-direction:column;justify-content:space-between;padding:20px">
+        <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#CBBBE3">II · Brilho — loop para stories e encerramentos</span>
+        <div style="display:flex;justify-content:center">{{ animShine }}</div>
+        <span style="font-size:13px;color:#A898BC">Um ponto de luz percorre o arco; reflexo cruza o monograma.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 CORES -->
+<section id="s05" data-screen-label="05 Cores" style="padding:80px clamp(20px,5vw,64px) 96px;max-width:1280px;margin:0 auto">
+  <div style="display:flex;gap:16px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B;border-top:1px solid #1F1030;padding-top:16px"><span style="color:#B8892E">05</span><span>Cores</span></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:32px;margin-top:40px;align-items:end">
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(36px,4.4vw,56px);line-height:1.05;text-wrap:balance">Ametista profunda, pérola e ouro.</h2>
+    <p style="margin:0;color:#4E3F5E;max-width:520px;text-wrap:pretty">Fundos claros dominam (≈60%), blocos roxos dão peso e luxo (≈30%), o ouro aparece só como fio e detalhe (≤10%). O azul safira existe apenas dentro do gradiente.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:40px">
+    <div style="display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:1/1.15;background:#1F1030"></div><div style="font-family:'Cormorant Garamond',serif;font-size:22px">Ametista Noturna</div><div style="font-size:12px;color:#6B5A7A;letter-spacing:.04em">#1F1030 · Texto e fundos</div></div>
+    <div style="display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:1/1.15;background:#3D1F5C"></div><div style="font-family:'Cormorant Garamond',serif;font-size:22px">Roxo Real</div><div style="font-size:12px;color:#6B5A7A;letter-spacing:.04em">#3D1F5C · Principal</div></div>
+    <div style="display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:1/1.15;background:#6B4A9B"></div><div style="font-family:'Cormorant Garamond',serif;font-size:22px">Violeta</div><div style="font-size:12px;color:#6B5A7A;letter-spacing:.04em">#6B4A9B · Apoio</div></div>
+    <div style="display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:1/1.15;background:#CBBBE3"></div><div style="font-family:'Cormorant Garamond',serif;font-size:22px">Lavanda</div><div style="font-size:12px;color:#6B5A7A;letter-spacing:.04em">#CBBBE3 · Detalhes</div></div>
+    <div style="display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:1/1.15;background:#EFEAF3"></div><div style="font-family:'Cormorant Garamond',serif;font-size:22px">Névoa</div><div style="font-size:12px;color:#6B5A7A;letter-spacing:.04em">#EFEAF3 · Fundo 2</div></div>
+    <div style="display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:1/1.15;background:#F8F5F1;border:1px solid #E3DAEA"></div><div style="font-family:'Cormorant Garamond',serif;font-size:22px">Pérola</div><div style="font-size:12px;color:#6B5A7A;letter-spacing:.04em">#F8F5F1 · Fundo 1</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:12px;margin-top:24px">
+    <div style="display:flex;flex-direction:column;gap:10px"><div style="height:120px;background:linear-gradient(115deg,#6E4E1A 0%,#E4C57A 40%,#B8892E 70%,#F2DC97 100%)"></div><div style="font-family:'Cormorant Garamond',serif;font-size:22px">Ouro Lira</div><div style="font-size:12px;color:#6B5A7A;letter-spacing:.04em">#6E4E1A → #E4C57A → #B8892E → #F2DC97 · Só em fios, moldura e ícones. Chapado: #B8892E</div></div>
+    <div style="display:flex;flex-direction:column;gap:10px"><div style="height:120px;background:linear-gradient(125deg,#3D1F5C 0%,#4B2F80 45%,#2B3A86 100%)"></div><div style="font-family:'Cormorant Garamond',serif;font-size:22px">Gradiente Crepúsculo</div><div style="font-size:12px;color:#6B5A7A;letter-spacing:.04em">#3D1F5C → #4B2F80 → #2B3A86 (azul safira) · Capas, stories, blocos de destaque</div></div>
+  </div>
+</section>
+
+<!-- 06 TIPOGRAFIA -->
+<section id="s06" data-screen-label="06 Tipografia" style="background:#EFEAF3;padding:80px clamp(20px,5vw,64px) 96px">
+  <div style="max-width:1280px;margin:0 auto">
+    <div style="display:flex;gap:16px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B;border-top:1px solid #1F1030;padding-top:16px"><span style="color:#B8892E">06</span><span>Tipografia</span></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px;margin-top:40px">
+      <div style="background:#F8F5F1;padding:28px;display:flex;flex-direction:column;gap:18px">
+        <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">Assinatura · Italiana</span>
+        <div style="font-family:'Italiana',serif;font-size:64px;line-height:1;color:#3D1F5C">Aa</div>
+        <div style="font-family:'Italiana',serif;font-size:22px;letter-spacing:.14em;color:#3D1F5C">ARYANNE LIRA</div>
+        <p style="margin:0;font-size:14px;color:#4E3F5E">Só para o nome e palavras de impacto em caixa-alta. Nunca em textos.</p>
+      </div>
+      <div style="background:#F8F5F1;padding:28px;display:flex;flex-direction:column;gap:18px">
+        <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">Títulos · Cormorant Garamond</span>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:64px;line-height:1;color:#3D1F5C">Aa <i>Aa</i></div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:26px;line-height:1.15;color:#1F1030">Naturalidade <i>é o novo luxo.</i></div>
+        <p style="margin:0;font-size:14px;color:#4E3F5E">Regular e Medium para títulos; itálico para a palavra de ênfase.</p>
+      </div>
+      <div style="background:#F8F5F1;padding:28px;display:flex;flex-direction:column;gap:18px">
+        <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">Textos · Jost</span>
+        <div style="font-family:'Jost',sans-serif;font-weight:300;font-size:64px;line-height:1;color:#3D1F5C">Aa</div>
+        <div style="font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:#1F1030">Estética Avançada</div>
+        <p style="margin:0;font-size:14px;color:#4E3F5E">Light e Regular para corpo; caixa-alta espaçada (+40%) para rótulos.</p>
+      </div>
+    </div>
+    <div style="background:#F8F5F1;margin-top:16px;padding:32px;display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">Hierarquia no post</span>
+      <span style="font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:#B8892E">Bioestimulador</span>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,48px);line-height:1.05;color:#1F1030;max-width:720px">Colágeno não se repõe com creme. <i style="color:#6B4A9B">Se estimula.</i></div>
+      <p style="margin:0;font-size:16px;color:#4E3F5E;max-width:560px">O bioestimulador ativa a produção natural da sua pele, com resultado progressivo ao longo de 3 a 6 meses.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 07 ELEMENTOS -->
+<section id="s07" data-screen-label="07 Elementos" style="padding:80px clamp(20px,5vw,64px) 96px;max-width:1280px;margin:0 auto">
+  <div style="display:flex;gap:16px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B;border-top:1px solid #1F1030;padding-top:16px"><span style="color:#B8892E">07</span><span>Elementos gráficos</span></div>
+  <h2 style="margin:40px 0 0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(36px,4.4vw,56px);line-height:1.05;max-width:760px;text-wrap:balance">O arco como janela para a pele.</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px;margin-top:40px">
+    <div style="border:1px solid #E3DAEA;padding:20px;display:flex;flex-direction:column;gap:16px">
+      <div style="aspect-ratio:1;background:#EFEAF3;display:flex;align-items:center;justify-content:center">
+        <div style="width:46%;aspect-ratio:2/3;border-radius:999px;background:repeating-linear-gradient(135deg,#CBBBE3 0 6px,#E3DAEA 6px 12px);outline:1px solid #B8892E;outline-offset:6px;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:10px;color:#3D1F5C">foto</div>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px">Janela em arco</div>
+      <p style="margin:0;font-size:14px;color:#4E3F5E">Fotos de rosto recortadas no formato da moldura, com fio dourado externo.</p>
+    </div>
+    <div style="border:1px solid #E3DAEA;padding:20px;display:flex;flex-direction:column;gap:16px">
+      <div style="aspect-ratio:1;background:#F8F5F1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px">
+        <div style="width:70%;height:1px;background:linear-gradient(90deg,#B8892E00,#E4C57A,#B8892E00)"></div>
+        <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:#3D1F5C">antes & depois</div>
+        <div style="width:70%;height:1px;background:linear-gradient(90deg,#B8892E00,#E4C57A,#B8892E00)"></div>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px">Fio dourado</div>
+      <p style="margin:0;font-size:14px;color:#4E3F5E">Divisor que se esvai nas pontas. Nunca como borda de caixa inteira.</p>
+    </div>
+    <div style="border:1px solid #E3DAEA;padding:20px;display:flex;flex-direction:column;gap:16px">
+      <div style="aspect-ratio:1;background:linear-gradient(125deg,#3D1F5C,#4B2F80 45%,#2B3A86);display:flex;align-items:flex-end;padding:18px;overflow:hidden;position:relative">
+        <div style="position:absolute;right:-18%;top:-10%;width:70%;aspect-ratio:2/3;border-radius:999px;border:1px solid #E4C57A88"></div>
+        <div style="position:absolute;right:-12%;top:-4%;width:58%;aspect-ratio:2/3;border-radius:999px;border:1px solid #E4C57A55"></div>
+        <span style="font-family:'Italiana',serif;font-size:22px;color:#F8F5F1;letter-spacing:.12em;position:relative">AL</span>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px">Arcos em eco</div>
+      <p style="margin:0;font-size:14px;color:#4E3F5E">Moldura ampliada e sangrada, como textura de fundo em capas.</p>
+    </div>
+    <div style="border:1px solid #E3DAEA;padding:20px;display:flex;flex-direction:column;gap:16px">
+      <div style="aspect-ratio:1;background:#F8F5F1;display:flex;align-items:center;justify-content:center">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="padding:8px 18px;border:1px solid #3D1F5C;border-radius:999px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#3D1F5C;text-align:center">Agende</span>
+          <span style="padding:8px 18px;background:#3D1F5C;border-radius:999px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#F8F5F1;text-align:center">Saiba mais</span>
+        </div>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px">Etiquetas em cápsula</div>
+      <p style="margin:0;font-size:14px;color:#4E3F5E">CTAs e tags herdam o raio do arco.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 FOTOGRAFIA -->
+<section id="s08" data-screen-label="08 Fotografia" style="background:#EFEAF3;padding:80px clamp(20px,5vw,64px) 96px">
+  <div style="max-width:1280px;margin:0 auto">
+    <div style="display:flex;gap:16px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B;border-top:1px solid #1F1030;padding-top:16px"><span style="color:#B8892E">08</span><span>Fotografia</span></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:32px;margin-top:40px;align-items:end">
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(36px,4.4vw,56px);line-height:1.05;text-wrap:balance">Luz suave, pele real.</h2>
+      <p style="margin:0;color:#4E3F5E;max-width:520px;text-wrap:pretty">Luz natural lateral, fundo neutro ou lavanda, tons levemente frios. Textura de pele preservada — sem filtros que apaguem poros.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px;margin-top:40px">
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:4/5;background:repeating-linear-gradient(135deg,#DCD1E6 0 8px,#E7DFEE 8px 16px);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:11px;color:#3D1F5C;text-align:center;padding:12px">retrato da Dra. Aryanne<br>jaleco, luz de janela</div><span style="font-size:13px;color:#4E3F5E">Autoridade — olhar direto, sorriso leve</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:4/5;background:repeating-linear-gradient(135deg,#DCD1E6 0 8px,#E7DFEE 8px 16px);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:11px;color:#3D1F5C;text-align:center;padding:12px">close de pele / perfil<br>paciente real</div><span style="font-size:13px;color:#4E3F5E">Detalhe — textura e contorno</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:4/5;background:repeating-linear-gradient(135deg,#DCD1E6 0 8px,#E7DFEE 8px 16px);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:11px;color:#3D1F5C;text-align:center;padding:12px">mãos + seringa / aparelho<br>fundo desfocado</div><span style="font-size:13px;color:#4E3F5E">Técnica — procedimento sem sangue ou agulha em foco</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:4/5;background:repeating-linear-gradient(135deg,#DCD1E6 0 8px,#E7DFEE 8px 16px);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:11px;color:#3D1F5C;text-align:center;padding:12px">ambiente da clínica<br>tons lavanda e dourado</div><span style="font-size:13px;color:#4E3F5E">Ambiente — acolhimento e cuidado</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 INSTAGRAM -->
+<section id="s09" data-screen-label="09 Instagram" style="padding:80px clamp(20px,5vw,64px) 96px;max-width:1280px;margin:0 auto">
+  <div style="display:flex;gap:16px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B;border-top:1px solid #1F1030;padding-top:16px"><span style="color:#B8892E">09</span><span>Instagram · topo de funil</span></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:32px;margin-top:40px;align-items:end">
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(36px,4.4vw,56px);line-height:1.05;text-wrap:balance">Educar antes de vender.</h2>
+    <p style="margin:0;color:#4E3F5E;max-width:520px;text-wrap:pretty">Três formatos-base: <b style="font-weight:500">Educativo</b> (quebra mitos), <b style="font-weight:500">Autoridade</b> (a Dra. explica) e <b style="font-weight:500">Convite</b> (avaliação). Alternar fundo claro e roxo no grid para criar ritmo.</p>
+  </div>
+
+  <div style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B;margin:48px 0 14px">Feed · 1080 × 1350</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px">
+    <div style="aspect-ratio:4/5;container-type:inline-size;background:linear-gradient(150deg,#3D1F5C,#4B2F80 55%,#2B3A86);color:#F8F5F1;padding:8%;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden">
+      <div style="position:absolute;right:-22cqw;top:-10cqw;width:70cqw;height:105cqw;border-radius:999px;border:1px solid #E4C57A66"></div>
+      <span style="font-size:3.6cqw;letter-spacing:.4em;text-transform:uppercase;color:#E4C57A;position:relative">Mito ou verdade</span>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:11cqw;line-height:1.02;position:relative">Botox não congela o rosto. <i style="color:#CBBBE3">Excesso, sim.</i></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;font-size:3.4cqw;letter-spacing:.2em;position:relative"><span style="font-family:'Italiana',serif;font-size:5cqw;letter-spacing:.14em">ARYANNE LIRA</span><span style="color:#CBBBE3">@aryannelira</span></div>
+    </div>
+    <div style="aspect-ratio:4/5;container-type:inline-size;background:#F8F5F1;border:1px solid #E3DAEA;padding:8%;display:flex;flex-direction:column;gap:5cqw">
+      <span style="font-size:3.6cqw;letter-spacing:.4em;text-transform:uppercase;color:#B8892E">Bioestimulador</span>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:9.5cqw;line-height:1.02;color:#1F1030">5 sinais de que sua pele <i style="color:#6B4A9B">pede colágeno</i></div>
+      <div style="flex:1;border-radius:999px 999px 0 0;background:repeating-linear-gradient(135deg,#DCD1E6 0 8px,#E7DFEE 8px 16px);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:3.4cqw;color:#3D1F5C">close de pele</div>
+      <div style="display:flex;justify-content:space-between;font-size:3.4cqw;color:#6B4A9B;letter-spacing:.2em;text-transform:uppercase"><span>Arraste →</span><span>@aryannelira</span></div>
+    </div>
+    <div style="aspect-ratio:4/5;container-type:inline-size;background:#EFEAF3;padding:8%;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center">
+      <div style="width:44cqw;height:62cqw;border-radius:999px;background:repeating-linear-gradient(135deg,#CBBBE3 0 8px,#DCD1E6 8px 16px);outline:1px solid #B8892E;outline-offset:2.4cqw;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:3.2cqw;color:#3D1F5C">retrato Dra.</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:7.4cqw;line-height:1.15;color:#1F1030">“Meu trabalho é que digam que você está descansada — não que fez algo.”</div>
+      <span style="font-size:3.4cqw;letter-spacing:.4em;text-transform:uppercase;color:#6B4A9B">Dra. Aryanne Lira</span>
+    </div>
+  </div>
+
+  <div style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B;margin:48px 0 14px">Carrossel · educativo</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:4px">
+    <div style="aspect-ratio:4/5;container-type:inline-size;background:#1F1030;color:#F8F5F1;padding:9%;display:flex;flex-direction:column;justify-content:flex-end;gap:5cqw;position:relative;overflow:hidden">
+      <div style="position:absolute;left:50%;top:8cqw;transform:translateX(-50%);width:40cqw;height:60cqw;border-radius:999px;border:1px solid #E4C57A"></div>
+      <div style="position:absolute;left:50%;top:11cqw;transform:translateX(-50%);width:34cqw;height:54cqw;border-radius:999px;border:1px solid #E4C57A88"></div>
+      <span style="font-size:4cqw;letter-spacing:.4em;text-transform:uppercase;color:#E4C57A">01 / 05</span>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:11cqw;line-height:1">Preenchimento labial: <i style="color:#CBBBE3">3 mitos</i></div>
+    </div>
+    <div style="aspect-ratio:4/5;container-type:inline-size;background:#F8F5F1;border:1px solid #E3DAEA;padding:9%;display:flex;flex-direction:column;justify-content:space-between">
+      <span style="font-size:4cqw;letter-spacing:.4em;text-transform:uppercase;color:#B8892E">Mito 01</span>
+      <div style="display:flex;flex-direction:column;gap:5cqw">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:10cqw;line-height:1.02;color:#1F1030;text-decoration:line-through;text-decoration-color:#B8892E;text-decoration-thickness:1px">“Sempre fica artificial.”</div>
+        <div style="width:30cqw;height:1px;background:linear-gradient(90deg,#E4C57A,#E4C57A00)"></div>
+        <p style="margin:0;font-size:5cqw;line-height:1.45;color:#4E3F5E">O resultado depende de dose, técnica e anatomia. Hidratar e contornar é diferente de aumentar.</p>
+      </div>
+      <span style="font-size:3.6cqw;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">Arraste →</span>
+    </div>
+    <div style="aspect-ratio:4/5;container-type:inline-size;background:#EFEAF3;padding:9%;display:flex;flex-direction:column;justify-content:space-between">
+      <span style="font-size:4cqw;letter-spacing:.4em;text-transform:uppercase;color:#B8892E">Mito 02</span>
+      <div style="display:flex;flex-direction:column;gap:5cqw">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:10cqw;line-height:1.02;color:#1F1030;text-decoration:line-through;text-decoration-color:#B8892E;text-decoration-thickness:1px">“Dói muito.”</div>
+        <div style="width:30cqw;height:1px;background:linear-gradient(90deg,#E4C57A,#E4C57A00)"></div>
+        <p style="margin:0;font-size:5cqw;line-height:1.45;color:#4E3F5E">Usamos anestésico tópico e produto com lidocaína. A maioria descreve como um leve incômodo.</p>
+      </div>
+      <span style="font-size:3.6cqw;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B">Arraste →</span>
+    </div>
+    <div style="aspect-ratio:4/5;container-type:inline-size;background:linear-gradient(150deg,#3D1F5C,#4B2F80 55%,#2B3A86);color:#F8F5F1;padding:9%;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center">
+      <span style="font-size:4cqw;letter-spacing:.4em;text-transform:uppercase;color:#E4C57A">05 / 05</span>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:10cqw;line-height:1.05">Sua boca, <i style="color:#CBBBE3">só que mais você.</i></div>
+      <span style="padding:3cqw 7cqw;border:1px solid #E4C57A;border-radius:999px;font-size:3.8cqw;letter-spacing:.3em;text-transform:uppercase;color:#F2DC97">Agende sua avaliação</span>
+    </div>
+  </div>
+
+  <div style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B;margin:48px 0 14px">Stories · 1080 × 1920</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px;max-width:900px">
+    <div style="aspect-ratio:9/16;container-type:inline-size;background:linear-gradient(170deg,#3D1F5C,#2B3A86);color:#F8F5F1;padding:9%;display:flex;flex-direction:column;justify-content:center;gap:8cqw;border-radius:14px">
+      <span style="font-size:4.4cqw;letter-spacing:.4em;text-transform:uppercase;color:#E4C57A">Enquete</span>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:13cqw;line-height:1">Você já fez toxina botulínica?</div>
+      <div style="display:flex;flex-direction:column;gap:3cqw">
+        <span style="padding:4cqw;background:#F8F5F1;color:#3D1F5C;border-radius:999px;text-align:center;font-size:5cqw">Sim, amo</span>
+        <span style="padding:4cqw;border:1px solid #F8F5F1;border-radius:999px;text-align:center;font-size:5cqw">Ainda tenho medo</span>
+      </div>
+    </div>
+    <div style="aspect-ratio:9/16;container-type:inline-size;background:#F8F5F1;border:1px solid #E3DAEA;padding:9%;display:flex;flex-direction:column;gap:6cqw;border-radius:14px">
+      <span style="font-size:4.4cqw;letter-spacing:.4em;text-transform:uppercase;color:#B8892E">Bastidores</span>
+      <div style="flex:1;border-radius:999px;background:repeating-linear-gradient(135deg,#DCD1E6 0 8px,#E7DFEE 8px 16px);outline:1px solid #B8892E;outline-offset:2cqw;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:4cqw;color:#3D1F5C">vídeo da clínica</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:9cqw;line-height:1.05;color:#1F1030">Ultrassom microfocado: <i style="color:#6B4A9B">como funciona</i></div>
+    </div>
+    <div style="aspect-ratio:9/16;container-type:inline-size;background:#1F1030;color:#F8F5F1;padding:9%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:8cqw;border-radius:14px">
+      <div style="position:relative;width:24cqw;container-type:inline-size">
+        <svg viewBox="0 0 100 150" style="display:block;width:100%;height:auto"><rect x="1" y="1" width="98" height="148" rx="49" style="fill:none;stroke:url(#gold);stroke-width:1.6"></rect><rect x="5" y="5" width="90" height="140" rx="45" style="fill:none;stroke:url(#gold);stroke-width:.9"></rect></svg>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-weight:400;font-size:78cqw;line-height:1;color:#F8F5F1;padding-top:4cqw">A</div>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:11cqw;line-height:1.05">Agenda de outubro <i style="color:#CBBBE3">aberta</i></div>
+      <span style="padding:4cqw 8cqw;background:linear-gradient(115deg,#B8892E,#F2DC97,#B8892E);color:#1F1030;border-radius:999px;font-size:4.4cqw;letter-spacing:.3em;text-transform:uppercase;font-weight:500">Link na bio</span>
+    </div>
+  </div>
+</section>
+
+<!-- 10 DESTAQUES -->
+<section id="s10" data-screen-label="10 Destaques" style="background:#EFEAF3;padding:80px clamp(20px,5vw,64px) 96px">
+  <div style="max-width:1280px;margin:0 auto">
+    <div style="display:flex;gap:16px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B;border-top:1px solid #1F1030;padding-top:16px"><span style="color:#B8892E">10</span><span>Destaques de stories</span></div>
+    <h2 style="margin:40px 0 0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(36px,4.4vw,56px);line-height:1.05;text-wrap:balance">Capas com o arco e a inicial.</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:28px;margin-top:40px">
+      <sc-for list="{{ highlights }}" as="h" hint-placeholder-count="8">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:10px;width:96px">
+          <div style="width:88px;height:88px;border-radius:50%;padding:3px;background:linear-gradient(135deg,#6E4E1A,#E4C57A,#B8892E,#F2DC97)">
+            <div style="width:100%;height:100%;border-radius:50%;background:linear-gradient(150deg,#3D1F5C,#2B3A86);display:flex;align-items:center;justify-content:center">
+              <div style="width:30px;height:44px;border-radius:999px;border:1px solid #E4C57A;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:22px;color:#F8F5F1;padding-top:2px">{{ h.l }}</div>
+            </div>
+          </div>
+          <span style="font-size:12px;color:#1F1030;text-align:center">{{ h.name }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- 11 APLICAÇÕES -->
+<section id="s11" data-screen-label="11 Aplicações" style="padding:80px clamp(20px,5vw,64px) 96px;max-width:1280px;margin:0 auto">
+  <div style="display:flex;gap:16px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#6B4A9B;border-top:1px solid #1F1030;padding-top:16px"><span style="color:#B8892E">11</span><span>Aplicações</span></div>
+  <h2 style="margin:40px 0 0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(36px,4.4vw,56px);line-height:1.05;text-wrap:balance">Papelaria.</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px;margin-top:40px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="aspect-ratio:85/55;container-type:inline-size;background:linear-gradient(145deg,#3D1F5C,#1F1030 75%);display:flex;align-items:center;justify-content:center;box-shadow:0 20px 40px -20px #1F103088">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:3cqw">
+          <div style="position:relative;width:11cqw;container-type:inline-size">
+            <svg viewBox="0 0 100 150" style="display:block;width:100%;height:auto"><rect x="1" y="1" width="98" height="148" rx="49" style="fill:none;stroke:url(#gold);stroke-width:1.6"></rect><rect x="5" y="5" width="90" height="140" rx="45" style="fill:none;stroke:url(#gold);stroke-width:.9"></rect></svg>
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-weight:400;font-size:78cqw;line-height:1;color:#F8F5F1;padding-top:4cqw">A</div>
+          </div>
+          <div style="font-family:'Italiana',serif;font-size:6cqw;letter-spacing:.14em;color:#F8F5F1;line-height:1">ARYANNE LIRA</div>
+          <div style="font-size:1.8cqw;letter-spacing:.46em;text-transform:uppercase;color:#CBBBE3">Estética Avançada</div>
+        </div>
+      </div>
+      <div style="aspect-ratio:85/55;container-type:inline-size;background:#F8F5F1;border:1px solid #E3DAEA;padding:8%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px -24px #1F103055">
+        <div style="display:flex;flex-direction:column;gap:1.5cqw">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:6.4cqw;color:#1F1030;line-height:1">Dra. Aryanne Lira</div>
+          <div style="font-size:2.4cqw;letter-spacing:.34em;text-transform:uppercase;color:#6B4A9B">Estética Avançada</div>
+        </div>
+        <div style="width:22cqw;height:1px;background:linear-gradient(90deg,#E4C57A,#E4C57A00)"></div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:4cqw;font-size:2.8cqw;color:#3A2B4A;line-height:1.6">
+          <div style="display:flex;flex-direction:column"><span>(00) 00000-0000</span><span>@aryannelira</span><span>Endereço da clínica</span></div>
+          <div style="width:6cqw;height:9cqw;border-radius:999px;border:1px solid #B8892E;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-size:5cqw;color:#3D1F5C">A</div>
+        </div>
+      </div>
+      <span style="font-size:13px;color:#4E3F5E">Cartão de visita 85 × 55 mm · frente roxa com hot stamping dourado, verso em pérola.</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="aspect-ratio:210/297;container-type:inline-size;background:#FFFFFF;border:1px solid #E3DAEA;padding:9% 10%;display:flex;flex-direction:column;box-shadow:0 24px 48px -28px #1F103055;max-width:480px;width:100%;align-self:center">
+        <div style="display:flex;align-items:center;gap:3cqw">
+          <div style="position:relative;width:6cqw;container-type:inline-size">
+            <svg viewBox="0 0 100 150" style="display:block;width:100%;height:auto"><rect x="1" y="1" width="98" height="148" rx="49" style="fill:none;stroke:url(#gold);stroke-width:2.4"></rect><rect x="7" y="7" width="86" height="136" rx="43" style="fill:none;stroke:url(#gold);stroke-width:1.4"></rect></svg>
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'TAN Pearl','Cormorant Garamond',serif;font-weight:400;font-size:78cqw;line-height:1;color:#3D1F5C;padding-top:4cqw">A</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:1cqw">
+            <div style="font-family:'Italiana',serif;font-size:4.4cqw;letter-spacing:.12em;color:#3D1F5C;line-height:1">ARYANNE LIRA</div>
+            <div style="font-size:1.6cqw;letter-spacing:.46em;text-transform:uppercase;color:#6B4A9B">Estética Avançada</div>
+          </div>
+        </div>
+        <div style="margin-top:12cqw;font-family:'Cormorant Garamond',serif;font-size:5cqw;color:#1F1030">Orientações pós-procedimento</div>
+        <div style="margin-top:4cqw;display:flex;flex-direction:column;gap:2.4cqw">
+          <div style="height:1.2cqw;background:#EFEAF3;width:92%"></div>
+          <div style="height:1.2cqw;background:#EFEAF3;width:86%"></div>
+          <div style="height:1.2cqw;background:#EFEAF3;width:90%"></div>
+          <div style="height:1.2cqw;background:#EFEAF3;width:60%"></div>
+        </div>
+        <div style="flex:1"></div>
+        <div style="height:1px;background:linear-gradient(90deg,#E4C57A00,#E4C57A,#E4C57A00)"></div>
+        <div style="margin-top:3cqw;display:flex;justify-content:center;gap:5cqw;font-size:1.9cqw;letter-spacing:.2em;text-transform:uppercase;color:#6B4A9B"><span>@aryannelira</span><span>(00) 00000-0000</span></div>
+      </div>
+      <span style="font-size:13px;color:#4E3F5E;text-align:center">Papel timbrado / receituário A4.</span>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#1F1030;color:#CBBBE3;padding:48px clamp(20px,5vw,64px);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;letter-spacing:.3em;text-transform:uppercase">
+  <span style="font-family:'Italiana',serif;font-size:20px;letter-spacing:.14em;color:#F8F5F1;text-transform:none">ARYANNE LIRA</span>
+  <a href="https://github.com/Opresida/aryannelira" target="_blank" style="color:#E4C57A;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap" style-hover="color:#F8F5F1"><span style="color:#CBBBE3">Repositório oficial</span><span style="text-transform:none;letter-spacing:.08em">github.com/Opresida/aryannelira</span></a>
+  <span>Brandbook · Edição 01</span>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;speed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.5,&quot;max&quot;:2,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Animação&quot;},&quot;loop&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Animação&quot;}}">
+class Component extends DCLogic {
+  state = { k: 0 };
+  componentDidMount() {
+    this.t = setInterval(() => { if (this.props.loop ?? true) this.setState(s => ({ k: s.k + 1 })); }, 9000 / (this.props.speed ?? 1));
+  }
+  componentWillUnmount() { clearInterval(this.t); }
+
+  logo(kind, size, key) {
+    const h = React.createElement, sp = 1 / (this.props.speed ?? 1);
+    const d = s => (s * sp).toFixed(2) + 's';
+    const draw = kind === 'draw' || kind === 'cover';
+    const rectBase = { fill: 'none', stroke: 'url(#gold)' };
+    const drawAnim = (delay, dur) => draw ? { strokeDasharray: 1, strokeDashoffset: 1, animation: `al-draw ${d(dur)} cubic-bezier(.6,0,.2,1) ${d(delay)} forwards` } : {};
+    const rects = [
+      h('rect', { key: 'o', x: 1, y: 1, width: 98, height: 148, rx: 49, pathLength: 1, style: { ...rectBase, strokeWidth: 1.4, ...drawAnim(0, 1.6) } }),
+      h('rect', { key: 'i', x: 5, y: 5, width: 90, height: 140, rx: 45, pathLength: 1, style: { ...rectBase, strokeWidth: .8, ...drawAnim(.3, 1.6) } }),
+    ];
+    if (kind === 'shine') rects.push(h('rect', { key: 's', x: 1, y: 1, width: 98, height: 148, rx: 49, pathLength: 1, style: { fill: 'none', stroke: '#FFF6D8', strokeWidth: 2.2, strokeLinecap: 'round', strokeDasharray: '0.06 0.94', filter: 'drop-shadow(0 0 3px #F2DC97)', animation: `al-orbit ${d(4)} linear infinite` } }));
+    const letterStyle = {
+      position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+      fontFamily: "'TAN Pearl','Cormorant Garamond',serif", fontWeight: 400, fontSize: size * 0.78, lineHeight: 1, paddingTop: size * .04,
+      ...(kind === 'shine'
+        ? { backgroundImage: 'linear-gradient(100deg,#F8F5F1 40%,#F2DC97 50%,#F8F5F1 60%)', backgroundSize: '250% 100%', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent', animation: `al-sheen ${d(4)} ease-in-out infinite` }
+        : { color: '#F8F5F1', opacity: 0, animation: `al-rise ${d(.9)} ease ${d(1.3)} forwards` })
+    };
+    const children = [
+      h('div', { key: 'mark', style: { position: 'relative', width: size } },
+        h('svg', { viewBox: '0 0 100 150', style: { display: 'block', width: '100%', height: 'auto', overflow: 'visible' } }, rects),
+        h('div', { style: letterStyle }, 'A'))
+    ];
+    if (kind !== 'shine' || true) {
+      children.push(h('div', { key: 'wm', style: { fontFamily: "'Italiana',serif", fontSize: size * .44, letterSpacing: '.14em', color: '#F8F5F1', lineHeight: 1, whiteSpace: 'nowrap', ...(draw ? { opacity: 0, animation: `al-track ${d(1.4)} cubic-bezier(.2,.7,.2,1) ${d(1.9)} forwards` } : {}) } }, 'ARYANNE LIRA'));
+      children.push(h('div', { key: 'tg', style: { fontFamily: "'Jost',sans-serif", fontSize: Math.max(10, size * .12), letterSpacing: '.46em', paddingLeft: '.46em', whiteSpace: 'nowrap', textTransform: 'uppercase', color: '#CBBBE3', ...(draw ? { opacity: 0, animation: `al-fade ${d(1)} ease ${d(2.8)} forwards` } : {}) } }, 'Estética Avançada'));
+    }
+    return h('div', { key: key + '-' + this.state.k, style: { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: size * .16 } }, children);
+  }
+
+  renderVals() {
+    return {
+      coverLogo: this.logo('cover', 112, 'c'),
+      animDraw: this.logo('draw', 88, 'd'),
+      animShine: this.logo('shine', 88, 's'),
+      replay: () => this.setState(s => ({ k: s.k + 1 })),
+      highlights: [
+        { l: 'B', name: 'Botox' }, { l: 'P', name: 'Preenchimentos' }, { l: 'L', name: 'Lábios' },
+        { l: 'C', name: 'Colágeno' }, { l: 'U', name: 'Ultrassom' }, { l: 'P', name: 'Pele' },
+        { l: 'R', name: 'Resultados' }, { l: 'A', name: 'Sobre a Dra.' }, { l: 'A', name: 'Avaliação' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
