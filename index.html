@@ -12,13 +12,13 @@
 <meta property="og:url" content="https://aryannelira.vercel.app/">
 <meta property="og:title" content="Plano Editorial - Dra. Aryanne Lira">
 <meta property="og:description" content="Beleza guiada pela ciencia - um mes de conteudo educativo, do mito a avaliacao, com naturalidade e verdade.">
-<meta property="og:image" content="https://aryannelira.vercel.app/og.jpg">
+<meta property="og:image" content="https://aryannelira.vercel.app/og.jpg?v=20260929">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Plano Editorial - Dra. Aryanne Lira">
 <meta name="twitter:description" content="Beleza guiada pela ciencia - um mes de conteudo educativo.">
-<meta name="twitter:image" content="https://aryannelira.vercel.app/og.jpg">
+<meta name="twitter:image" content="https://aryannelira.vercel.app/og.jpg?v=20260929">
 <title>Plano Editorial Aryanne Lira</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -135,7 +135,7 @@
   <div class="date"><div class="d">★</div><div class="m">Pin</div><div class="w">Topo</div></div>
   <div><div class="meta"><span class="tag t-car">CARROSSEL</span><span class="fmt">Autoridade</span></div>
   <h3>Conheça a Dra. Aryanne Lira</h3><p class="hook">Quem vai cuidar de você — os 3 pilares, a segurança e o convite à avaliação.</p></div></div>
-  <div class="strip"><img loading="lazy" src="car13/01.jpg"><img loading="lazy" src="car13/02.jpg"><img loading="lazy" src="car13/03.jpg"><img loading="lazy" src="car13/04.jpg"><img loading="lazy" src="car13/05.jpg"></div>
+  <div class="strip"><img loading="lazy" src="car13/01.jpg?v=20260929"><img loading="lazy" src="car13/02.jpg?v=20260929"><img loading="lazy" src="car13/03.jpg?v=20260929"><img loading="lazy" src="car13/04.jpg?v=20260929"><img loading="lazy" src="car13/05.jpg?v=20260929"></div>
 </div></div>
 
 <div id="grade"></div>
@@ -186,9 +186,9 @@ const weeks = [
  ]}
 ];
 function gallery(g){
-  if (g[0]==='est') return `<div class="strip"><img loading="lazy" src="est/${g[1]}.jpg" alt=""></div>`;
+  if (g[0]==='est') return `<div class="strip"><img loading="lazy" src="est/${g[1]}.jpg?v=20260929" alt=""></div>`;
   const [pc,n]=g; let s='<div class="strip">';
-  for(let i=1;i<=n;i++) s+=`<img loading="lazy" src="${pc}/${String(i).padStart(2,'0')}.jpg" alt="">`;
+  for(let i=1;i<=n;i++) s+=`<img loading="lazy" src="${pc}/${String(i).padStart(2,'0')}.jpg?v=20260929" alt="">`;
   return s+'</div>';
 }
 document.getElementById('grade').innerHTML = weeks.map(w=>`
