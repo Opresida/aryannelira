@@ -131,7 +131,7 @@
   <div class="date"><div class="d">★</div><div class="m">Pin</div><div class="w">Topo</div></div>
   <div><div class="meta"><span class="tag t-car">CARROSSEL</span><span class="fmt">Autoridade</span></div>
   <h3>Conheça Aryanne Lira</h3><p class="hook">Quem vai cuidar de você: os 3 pilares, a segurança e o convite à avaliação.</p></div></div>
-  <div class="strip"><img loading="lazy" src="car13/01.jpg?v=20260929" alt=""><img loading="lazy" src="car13/02.jpg?v=20260929" alt=""><img loading="lazy" src="car13/03.jpg?v=20260929" alt=""><img loading="lazy" src="car13/04.jpg?v=20260929" alt=""><img loading="lazy" src="car13/05.jpg?v=20260929" alt=""></div>
+  <div class="strip"><img loading="lazy" src="car13/01.jpg?v=20261026" alt=""><img loading="lazy" src="car13/02.jpg?v=20261026" alt=""><img loading="lazy" src="car13/03.jpg?v=20261026" alt=""><img loading="lazy" src="car13/04.jpg?v=20261026" alt=""><img loading="lazy" src="car13/05.jpg?v=20261026" alt=""></div>
 </div></div>
 
 <div id="grade"></div>
@@ -150,7 +150,7 @@ const weeks = [
   ['01','OUT','QUA','car','Educativo','Botox não congela o rosto (excesso, sim)','A toxina relaxa músculos específicos, não a expressão.',['car01',5]],
   ['02','OUT','QUI','est','Autoridade','"Um rosto mais descansado, com a sua expressão de sempre."','A promessa central da marca, em uma frase.',['est','e01']],
   ['03','OUT','SEX','car','Educativo','Preenchimento labial: 3 mitos','Artificial, dor e "todo mundo percebe", desfeitos.',['car02',5]],
-  ['04','OUT','SÁB','est','Convite','"Agenda de outubro aberta para avaliações."','Convite suave, sem promoção.',['est','e02']]
+  ['04','OUT','SÁB','est','Convite','"Agenda aberta para avaliações."','Convite suave, sem promoção.',['est','e02']]
  ]},
  { t:'Semana 2', s:'06 → 11 out · Colágeno e firmeza', days:[
   ['06','OUT','SEG','car','Educativo','Colágeno não se repõe com creme. Se estimula.','O que o bioestimulador realmente faz.',['car03',5]],
@@ -165,7 +165,7 @@ const weeks = [
   ['14','OUT','TER','est','Convite','"Seu rosto merece uma avaliação, não um palpite."','Valor do diagnóstico.',['est','e06']],
   ['15','OUT','QUA','car','Educativo','Rinomodelação: harmonia do nariz sem cirurgia','O que faz e, com honestidade, o que não faz.',['car07',5]],
   ['16','OUT','QUI','est','Autoridade','"Técnica sem anatomia é sorte. E sorte não é protocolo."','Autoridade científica.',['est','e07']],
-  ['17','OUT','SEX','car','Educativo','Começar aos 20+ é cedo demais?','Prevenção ≠ exagero.',['car08',5]],
+  ['17','OUT','SEX','car','Educativo','Começar aos 20+ é cedo demais?','Prevenção não é exagero.',['car08',5]],
   ['18','OUT','SÁB','est','Educativo','"O resultado bom respeita o tempo do seu colágeno."','Expectativa realista.',['est','e08']]
  ]},
  { t:'Semana 4', s:'20 → 25 out · Verdade e segurança', days:[
@@ -183,9 +183,9 @@ const weeks = [
 ];
 const FIO = '<svg class="fio-c" viewBox="0 0 320 22" aria-hidden="true"><path pathLength="1" d="M2 15C60 15 96 5 150 6s92 13 132 9c16-2 26-7 36-12"/></svg>';
 function gallery(g){
-  if (g[0]==='est') return `<div class="strip"><img loading="lazy" src="est/${g[1]}.jpg?v=20260929" alt=""></div>`;
+  if (g[0]==='est') return `<div class="strip"><img loading="lazy" src="est/${g[1]}.jpg?v=20261026" alt=""></div>`;
   const [pc,n]=g; let s='<div class="strip">';
-  for(let i=1;i<=n;i++) s+=`<img loading="lazy" src="${pc}/${String(i).padStart(2,'0')}.jpg?v=20260929" alt="">`;
+  for(let i=1;i<=n;i++) s+=`<img loading="lazy" src="${pc}/${String(i).padStart(2,'0')}.jpg?v=20261026" alt="">`;
   return s+'</div>';
 }
 document.getElementById('grade').innerHTML = weeks.map(w=>`
